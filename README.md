@@ -1,5 +1,5 @@
 # Azure Honeynet & SOC Project: Cyber Attacks in Real Time
-![Cloud Honeynet / SOC]([https://i.imgur.com/7s0rHfn.png](https://www.joshmadakor.tech/cyber/assets/img/project.png))
+![Cloud Honeynet / SOC]([https://www.joshmadakor.tech/cyber/assets/img/project.png])
 
 ## Introduction
 
