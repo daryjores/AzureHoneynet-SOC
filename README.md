@@ -3,7 +3,7 @@
 
 ## Introduction
 
- Dans ce projet, je simule un honeynet à petite échelle qui attire le trafic réel d'attaquants du monde entier via Microsoft Azure. L'objectif de ce projet est de démontrer les meilleures pratiques de sécurité, les tactiques de réponse aux incidents et les effets du durcissement d'un environnement. Nous y parviendrons en déployant intentionnellement des machines virtuelles qui n'ont aucune protection contre l'internet public afin d'attirer des hackers dans notre environnement. Ensuite, après l'ingestion de certaines sources de journaux dans Log Analytics Workspace, Microsoft Sentinel interviendra pour créer des cartes d'attaques, des alertes et des incidents. Afin de présenter les mesures avant et après le durcissement de l'environnement sur la base des incidents générés à partir de la capture de 24 heures. 
+ Dans ce projet, je simule un honeynet à petite échelle qui attire le trafic réel d'attaquants du monde entier via Microsoft Azure. L'objectif de ce projet est de démontrer les meilleures pratiques de sécurité, les tactiques de réponse aux incidents et les effets du durcissement d'un environnement. Nous y parviendrons en déployant intentionnellement des machines virtuelles qui n'ont aucune protection contre l'internet public afin d'attirer des hackers dans notre environnement. Ensuite, après l'ingestion de certaines sources de journaux dans Log Analytics Workspace, Microsoft Sentinel interviendra pour créer des cartes d'attaques, des alertes et des incidents. Afin de présenter les mesures avant et après le durcissement de l'environnement sur la base des incidents générés pour une durée de 24 heures. 
 
 ## Composants Azure utilisés
 
@@ -17,7 +17,7 @@
 - Microsoft Defender for Cloud 
 
 
-## Architecture Before Hardening
+## Architecture Avant Renforcement
 ![Architecture Diagram](https://i.imgur.com/c2E0AtK.png)
 
  - Dans la phase "AVANT" du projet, toutes les ressources ont été initialement déployées dans l'espoir que l'attraction serait obtenue à partir de l'internet public. Les machines virtuelles avaient leurs groupes de sécurité réseau (NSG) et leurs pare-feu intégrés grands ouverts, permettant un accès illimité à partir de n'importe quelle source. En outre, toutes les autres ressources, telles que les comptes de stockage et les bases de données, ont été déployées avec des points d'extrémité publics visibles sur l'internet, sans utiliser de points d'extrémité privés pour plus de sécurité. Ces machines ont ensuite été laissées à la disposition du public pendant 24 heures afin de générer les cartes d'attaques mentionnées précédemment. 
